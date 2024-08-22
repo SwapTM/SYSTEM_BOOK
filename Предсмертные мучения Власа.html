@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Предсмертные мучения Власа.</title>
+</head>
+<body>
+    <pre id="name">
+Предсметрные мучения Власа. АВТОР ВЛАС ЛАЗАРЕВ. 
+    </pre>
+    <pre id="text">
+-Влас
+-да?
+-А расскажи как сильно ты меня любишь?
+-Ну слушай, я люблю тебя как ветер в море, как высокие паруса что тянутся к облакам... Моя любовь так же бесконечна как космос и как чистое небо над головой
+-Влас, а что ты во мне любишь?
+-Я люблю в тебе все что есть и минусы и плюсы, всю тебя!
+-Влас а это правда что ты психически не здоров?
+-Да, я действительно болею тобой моя дорогая). Я настолько люблю тебя что не хочу расставаться с тобой ни на минуту!
+-Ты ведь понимаешь что все го лишь выдумал меня что бы любить хоть кого то в это мире?
+-нет...
+-Я всего лишь твое подсознание которое убивает твое моральное здоровье)))
+-Ну, за то я умру счастливым!
+-Нет, ты уже умирешь в муках.... тебе кажется что с тобой все хорошо разговаривают, но на самом деле...
+-на самом деле ..... я .... никому..... не нужен.......
+-Мне жаль Влас.... прими это....
+    </pre>
+    <button id="name_button">Копировать название</button>
+    <hr size="10" />
+    <button id="text_button">Копировать текст</button>
+</body>
+</html>
+<script>
+    document.querySelector("#text_button").addEventListener("click", function () {
+        navigator.clipboard.writeText(document.querySelector("#text").innerText).then(function () {
+            console.log('Text copied to clipboard');
+        }).catch(function (error) {
+            console.error('Error:', error);
+        });
+    });
+    document.querySelector("#name_button").addEventListener("click", function () {
+        navigator.clipboard.writeText(document.querySelector("#name").innerText).then(function () {
+            console.log('Text copied to clipboard');
+        }).catch(function (error) {
+            console.error('Error:', error);
+        });
+    });
+</script>
