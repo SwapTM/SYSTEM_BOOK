@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Бычий двор</title>
+</head>
+<body>
+    <button id="name_button">Копировать название</button>
+    <hr size="10" />
+    <button id="text_button">Копировать текст</button>
+    <pre id="name">
+Бычий двор! Автор - Коул Фелпс
+    </pre>
+    <pre id="text">
+В тёмном и холодном городе Веллиум жизнь текла под безжалостным контролем Тайного Совета. Окна домов были забаррикадированы, а небо затянуто непроницаемыми облаками, как бы намекая, что надежда здесь — роскошь. Каждый шаг жителей отслеживался с помощью всевидящих камер, а мысли — посредством Внутреннего Полицая, который завуалировано шептал: «Думай, как мы». Запрещённые слова, вроде «свобода» и «любовь», были искоренены, как сорняки, а единственной религией стал культ Двуличного Лидера. 
+
+Джессика, служащая в Министерстве Тепла и Уюта, внезапно заметила, что её работа не для блага общества, а для поддержания системы. Она тайком начала встречаться с Карлом, сторонником утопии, где люди бы имели право на мечты. Каждый их разговор был как искра в мраке, а их любовь — хрупкая надежда, захваченная в тиски бесчеловечного мира.
+    </pre>
+</body>
+</html>
+<script>
+    document.querySelector("#text_button").addEventListener("click", function () {
+        navigator.clipboard.writeText(document.querySelector("#text").innerText).then(function () {
+            console.log('Text copied to clipboard');
+        }).catch(function (error) {
+            console.error('Error:', error);
+        });
+    });
+    document.querySelector("#name_button").addEventListener("click", function () {
+        navigator.clipboard.writeText(document.querySelector("#name").innerText).then(function () {
+            console.log('Text copied to clipboard');
+        }).catch(function (error) {
+            console.error('Error:', error);
+        });
+    });
+</script>

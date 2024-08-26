@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Инструкция по приготовлению Ядерной Бомбы.</title>
+</head>
+<body>
+    <button id="name_button">Копировать название</button>
+    <hr size="10" />
+    <button id="text_button">Копировать текст</button>
+    <pre id="name">
+Инструкция по приготовлению Ядерной Бомбы. Автор - Неизвестен
+    </pre>
+    <pre id="text">
+[head=3][bold]Инструкция по приготовлению Ядерной Бомбы.[/bold][/head]
+
+Возьмите 2кг муки, 3кг гречки, металлический цилиндр литров на 9,3головки чеснока, 200грамм спичечных головок, 250грамм уксуса, все это аккуратно перемешайте и положите в цилиндр, запаяй, приклейте сбоку электронные часы-будильник, намотайте побольше проводов, ВАЖНО!!! -циферблат часов должен гореть [color=#B00000]КРАСНОЙ[/color] подсветкой! Найдите группу одиноко стоящих клоунов и с криками "АЛЛАХ АКБАР!" метните в их сторону эту атомную бомбу.
+
+[italic]Развлекайтесь![/italic]
+    </pre>
+</body>
+</html>
+<script>
+    document.querySelector("#text_button").addEventListener("click", function () {
+        navigator.clipboard.writeText(document.querySelector("#text").innerText).then(function () {
+            console.log('Text copied to clipboard');
+        }).catch(function (error) {
+            console.error('Error:', error);
+        });
+    });
+    document.querySelector("#name_button").addEventListener("click", function () {
+        navigator.clipboard.writeText(document.querySelector("#name").innerText).then(function () {
+            console.log('Text copied to clipboard');
+        }).catch(function (error) {
+            console.error('Error:', error);
+        });
+    });
+</script>

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Любовь и Смерть</title>
+</head>
+<body>
+    <button id="name_button">Копировать название</button>
+    <hr size="10" />
+    <button id="text_button">Копировать текст</button>
+    <pre id="name">
+Любовь и Смерть. Автор - Барнакси-Ан
+    </pre>
+    <pre id="text">
+                                 Любовь и Смерть
+                    Том-1 эпизод-1 Что такое смерть
+Когда то люди незнали что такое смерть думали что во всем есть смысл но. Бывает так что когда человек умерает он ничего не видет лиш бессконечную тьму которая становится все больше и больше. А все рассказы о любви всеголиш рассказыывают о том как же страшно потерять любимого человека. Но однажды я понял что смерть это буквально нечего.
+Когдато люди верили в богов и рилигии но все это всего лиш чушь которую втирают люди для того чтобы они были не единственные с таким пониманием. 
+                               Эпизод-2 Потеря близких
+Потеря это слово многозначное потеря интереса или потеря какого либо предмета но есть потеря близких которых уже не вернуть. Но бывает так что после смерти близких у человека что то щелкает в мозгу и у него появляется склонность к самоуби#ству.
+
+Написал (Барнакси-Ан)
+    </pre>
+</body>
+</html>
+<script>
+    document.querySelector("#text_button").addEventListener("click", function () {
+        navigator.clipboard.writeText(document.querySelector("#text").innerText).then(function () {
+            console.log('Text copied to clipboard');
+        }).catch(function (error) {
+            console.error('Error:', error);
+        });
+    });
+    document.querySelector("#name_button").addEventListener("click", function () {
+        navigator.clipboard.writeText(document.querySelector("#name").innerText).then(function () {
+            console.log('Text copied to clipboard');
+        }).catch(function (error) {
+            console.error('Error:', error);
+        });
+    });
+</script>
